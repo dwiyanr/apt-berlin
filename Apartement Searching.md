@@ -27,6 +27,7 @@ geojson:
   - [[berlin_lower_severity_caution_leaflet.geojson]]|Lower-severity caution areas
   - [[berlin-ubahn-lines.geojson]]|Berlin U-Bahn lines
 markerFile: [[Office]]
+markerFile: [[housing_anywhere]]
 draw: false
 noScrollZoom: true
 ```
