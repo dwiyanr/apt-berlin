@@ -1,0 +1,73 @@
+{
+  "type": "FeatureCollection",
+  "name": "Berlin lower-severity housing caution layer (WGS84)",
+  "description": "Approximate housing-inspection zones for noise, nightlife crowds and late-night disturbance. These are not police-designated crime areas and are not claims that every street or resident inside is unsafe. Use together with the separate Polizei Berlin kbO layer and inspect a specific address at the times you expect to be home.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "RAW-Gelände / Revaler Straße",
+        "title": "RAW-Gelände / Revaler Straße — nightlife and noise check",
+        "description": "Lower-severity housing caution: nightlife venues and event activity can mean late-night noise, queues and intoxicated crowds, especially on weekends. This is an approximate inspection zone, not an official crime boundary. Visit the exact building on a Friday or Saturday night and check whether bedrooms face Revaler Straße, the railway or venue courtyards.",
+        "category": "lower-severity housing caution",
+        "severity": "lower",
+        "main_concerns": "nightlife noise; crowds; late-night disturbance; petty-theft awareness",
+        "official_boundary": false,
+        "geometry_method": "approximate street-bounded inspection zone",
+        "source_note": "Interpretive layer based on the concentration of nightlife and event venues around RAW-Gelände; venue locations cross-checked against Berlin.de listings. Not a police or statistical crime boundary.",
+        "stroke": "#b45309",
+        "stroke-width": 2,
+        "stroke-opacity": 0.9,
+        "fill": "#f59e0b",
+        "fill-opacity": 0.16
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [13.44895, 52.50665],
+          [13.45165, 52.50693],
+          [13.45520, 52.50725],
+          [13.45915, 52.50762],
+          [13.45970, 52.50455],
+          [13.45590, 52.50420],
+          [13.45210, 52.50390],
+          [13.44915, 52.50455],
+          [13.44895, 52.50665]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Simon-Dach-Straße / Boxhagener Platz",
+        "title": "Simon-Dach-Straße / Boxhagener Platz — nightlife and crowd check",
+        "description": "Lower-severity housing caution: a dense bar, restaurant and nightlife area where evening and weekend street noise can matter more than general safety. This is an approximate inspection zone, not an official crime boundary. Check the exact block late on a warm Friday or Saturday and note nearby bars, Spätis, terraces, tram routes and bedroom orientation.",
+        "category": "lower-severity housing caution",
+        "severity": "lower",
+        "main_concerns": "bar and street noise; weekend crowds; late-night disturbance; petty-theft awareness",
+        "official_boundary": false,
+        "geometry_method": "approximate street-bounded inspection zone",
+        "source_note": "Interpretive layer centered on Simon-Dach-Straße and Boxhagener Platz; nightlife/event activity cross-checked against Berlin.de listings. Not a police or statistical crime boundary.",
+        "stroke": "#b45309",
+        "stroke-width": 2,
+        "stroke-opacity": 0.9,
+        "fill": "#f59e0b",
+        "fill-opacity": 0.16
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [13.45000, 52.51275],
+          [13.45420, 52.51315],
+          [13.45905, 52.51355],
+          [13.46295, 52.51365],
+          [13.46355, 52.51020],
+          [13.46190, 52.50785],
+          [13.45710, 52.50815],
+          [13.45255, 52.50855],
+          [13.45000, 52.51275]
+        ]]
+      }
+    }
+  ]
+}
