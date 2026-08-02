@@ -1,16 +1,15 @@
 ---
 aliases:
-  - Berlin warning areas
+  - Berlin apartment search map
 tags:
   - berlin
   - map
   - housing-research
 ---
 
-# Berlin kbO caution areas
+# Berlin apartment search
 
-> [!warning] Interpretation
-> These polygons are a caution and inspection layer for housing research. They do not mean that every street, building, or resident inside an outlined area is unsafe.
+Use this map to compare apartment locations, transport access, commute to the office, and factors worth checking during a viewing.
 
 ```leaflet
 id: berlin-kbo-caution-areas
@@ -27,40 +26,30 @@ geojson:
   - [[berlin_kbo_caution_leaflet.geojson]]|kbO caution areas
   - [[berlin_lower_severity_caution_leaflet.geojson]]|Lower-severity caution areas
   - [[berlin-ubahn-lines.geojson]]|Berlin U-Bahn lines
+marker: default,52.5133633,13.3959964,,My office
 draw: false
 noScrollZoom: true
 ```
 
-The blue-gray outlines show Berlin's 12 administrative districts; the red polygons show the seven areas contained in [[berlin_kbo_caution_leaflet.geojson|the kbO GeoJSON layer]]; the amber polygons show the approximate, lower-severity housing inspection zones in [[berlin_lower_severity_caution_leaflet.geojson|the lower-severity caution layer]]; and the colored routes show the U1–U9 lines from [[berlin-ubahn-lines.geojson|the Berlin U-Bahn GeoJSON layer]]. Hover over a feature to see its details. Use the layer control in the map's top-right corner to toggle any dataset, and use the other controls to pan and zoom.
+Toggle layers in the map's top-right corner and hover over features for details. Use the U-Bahn network and office marker to estimate a listing's commute; the red and amber areas are prompts for closer research, not automatic reasons to reject an apartment.
 
-| Layer | Meaning |
+| Layer | Use when comparing apartments |
 | --- | --- |
-| Blue-gray outline | Berlin district boundary |
-| Red outline and fill | kbO caution area |
-| Amber outline and fill | Approximate lower-severity housing caution area |
-| Colored line | U-Bahn route, using its official line color |
+| District boundaries | Identify the district and local administration |
+| Red kbO areas | Check the exact street and immediate surroundings |
+| Amber areas | Check nightlife, crowds, and evening noise |
+| U-Bahn lines | Estimate connections and commute options |
+| Office marker | Compare travel time to Hausvogteiplatz 3–4 |
 
-## kbO areas
+## Viewing checklist
 
-- Alexanderplatz
-- Rigaer Straße
-- Warschauer Brücke
-- Görlitzer Park/Wrangelkiez
-- Kottbusser Tor
-- Hermannplatz/Donaukiez
-- Hermannstraße/Bhf Neukölln
+- Check the route to work and the nearest late-night transport.
+- Visit the block during the day and on a weekend evening.
+- Note street noise, nearby venues, and bedroom orientation.
+- Evaluate the building and exact street rather than judging the wider neighborhood.
 
-## Lower-severity areas
+## Map notes
 
-- RAW-Gelände / Revaler Straße
-- Simon-Dach-Straße / Boxhagener Platz
+The red polygons are police-designated *kriminalitätsbelastete Orte* (kbO), effective 1 July 2026. The amber polygons are approximate housing-research zones around RAW/Revaler Straße and Simon-Dach-Straße/Boxhagener Platz, focused mainly on nightlife and noise. Neither layer describes every building or resident within it.
 
-## Data note
-
-The GeoJSON describes these as police-designated *kriminalitätsbelastete Orte* (kbO). Its metadata says the boundaries were digitized from Polizei Berlin maps published on 19 January 2026 and that the seven-area list took effect on 1 July 2026. Treat the boundaries as an orientation aid and verify important decisions against the current official source.
-
-The lower-severity layer in [[berlin_lower_severity_caution_leaflet.geojson]] contains two approximate inspection zones based on nightlife, noise, and crowd considerations. These are interpretive housing-research areas, not official police or statistical crime boundaries. Check the exact building and surrounding streets at the times described in each feature's details.
-
-The district layer in [[berlin_districts_leaflet.geojson]] contains all 12 *Bezirke*. It was retrieved on 2 August 2026 from the [official Berlin ALKIS district-boundary WFS](https://daten.berlin.de/datensaetze/alkis-berlin-bezirke-wfs-ced31d7d) and lightly simplified for responsive display. The source dataset is licensed under Datenlizenz Deutschland – Zero – Version 2.0.
-
-The U-Bahn layer in [[berlin-ubahn-lines.geojson]] contains routes U1–U9. Its paths connect VBB GTFS station coordinates in service order and are intended as an orientation aid, not as engineering-grade track centerlines. The data is attributed to Verkehrsverbund Berlin-Brandenburg (VBB) under CC BY 4.0.
+District boundaries come from the [official Berlin ALKIS WFS](https://daten.berlin.de/datensaetze/alkis-berlin-bezirke-wfs-ced31d7d). U-Bahn routes U1–U9 connect VBB GTFS station coordinates and are for orientation rather than precise track geometry.
